@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@id/center_right"
+        motion:constraintSetStart="@id/left_center_right"
+        motion:duration="700" />
+
+    <Transition
+        motion:constraintSetEnd="@id/left_center_right"
+        motion:constraintSetStart="@id/center_right"
+        motion:duration="700" />
+
+    <Transition
+        motion:constraintSetEnd="@id/left_center_right"
+        motion:constraintSetStart="@id/left_center"
+        motion:duration="700" />
+
+    <Transition
+        motion:constraintSetEnd="@id/left_center"
+        motion:constraintSetStart="@id/left_center_right"
+        motion:duration="700" />
+
+    <ConstraintSet android:id="@+id/left_center_right">
+        <Constraint android:id="@id/left">
+            <Transform
+                motion:rotationY="25"
+                motion:translationX="-200dp" />
+        </Constraint>
+
+        <Constraint android:id="@id/center">
+            <Transform
+                motion:rotationY="0"
+                motion:translationX="0dp" />
+        </Constraint>
+
+        <Constraint android:id="@id/right">
+            <Transform
+                motion:rotationY="-15"
+                motion:translationX="200dp" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/center_right">
+        <Constraint android:id="@id/left">
+            <Transform motion:translationX="0dp" />
+        </Constraint>
+
+        <Constraint android:id="@id/center">
+            <Transform
+                motion:rotationY="-25"
+                motion:translationX="200dp" />
+        </Constraint>
+
+        <Constraint android:id="@id/right">
+            <Transform
+                motion:rotationY="-25"
+                motion:translationX="500dp" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/left_center">
+        <Constraint android:id="@id/left">
+            <Transform
+                motion:rotationY="25"
+                motion:translationX="-500dp" />
+        </Constraint>
+
+        <Constraint android:id="@id/center">
+            <Transform
+                motion:rotationY="25"
+                motion:translationX="-200dp" />
+        </Constraint>
+
+        <Constraint android:id="@id/right">
+            <Transform
+                motion:rotationY="0"
+                motion:translationX="0dp" />
+        </Constraint>
+    </ConstraintSet>
+
+</MotionScene>
