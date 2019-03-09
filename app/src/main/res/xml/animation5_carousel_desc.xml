@@ -5,22 +5,22 @@
     <Transition
         motion:constraintSetEnd="@id/center_right"
         motion:constraintSetStart="@id/left_center_right"
-        motion:duration="700" />
+        motion:duration="300" />
 
     <Transition
         motion:constraintSetEnd="@id/left_center_right"
         motion:constraintSetStart="@id/center_right"
-        motion:duration="700" />
+        motion:duration="300" />
 
     <Transition
         motion:constraintSetEnd="@id/left_center_right"
         motion:constraintSetStart="@id/left_center"
-        motion:duration="700" />
+        motion:duration="300" />
 
     <Transition
         motion:constraintSetEnd="@id/left_center"
         motion:constraintSetStart="@id/left_center_right"
-        motion:duration="700" />
+        motion:duration="300" />
 
     <ConstraintSet android:id="@+id/left_center_right">
         <Constraint android:id="@id/left">

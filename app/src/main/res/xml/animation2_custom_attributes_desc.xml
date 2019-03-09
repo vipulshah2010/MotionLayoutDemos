@@ -5,8 +5,7 @@
     <Transition
         app:constraintSetEnd="@id/end"
         app:constraintSetStart="@id/start"
-        app:duration="400"
-        app:interpolator="bounce">
+        app:duration="400">
 
         <OnClick
             app:clickAction="toggle"

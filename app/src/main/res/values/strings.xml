@@ -16,4 +16,7 @@
     <string name="register">Register</string>
     <string name="login">Login</string>
     <string name="save_credentials">Save Credentials</string>
+    <string name="this_is_awesome_title">This is Awesome Title</string>
+    <string name="alex_smith">Alex Smith</string>
+    <string name="netherlands">Netherlands</string>
 </resources>
