@@ -21,7 +21,7 @@ class Animation4_Photo_Manipulation : AppCompatActivity() {
             }
 
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                motionLayout.progress = progress.toFloat() / 100
+
             }
         })
     }

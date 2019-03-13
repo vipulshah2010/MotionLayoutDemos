@@ -17,11 +17,10 @@ class Animation7_Collapsing_Header : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.animation7_collapsing_header)
 
-        findViewById<ImageView>(R.id.headerImageView).load(R.drawable.ic_amsterdam)
-//        Picasso.with(this@Animation7_Collapsing_Header).load(R.drawable.ic_amsterdam)
-//            .resize(150, 100)
-//            .centerInside()
-//            .into(findViewById<ImageView>(R.id.headerImageView))
+        Picasso.with(this@Animation7_Collapsing_Header).load(R.drawable.ic_amsterdam)
+            .resize(150, 100)
+            .centerInside()
+            .into(findViewById<ImageView>(R.id.headerImageView))
 
         personRecyclerView.layoutManager = LinearLayoutManager(this@Animation7_Collapsing_Header)
         personRecyclerView.adapter = ItemAdapter()

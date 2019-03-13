@@ -49,14 +49,14 @@
         <KeyFrameSet>
             <KeyAttribute
                 app:framePosition="60"
-                app:motionTarget="@id/toolbar_image">
+                app:target="@id/toolbar_image">
                 <CustomAttribute
                     app:attributeName="imageAlpha"
                     app:customIntegerValue="255" />
             </KeyAttribute>
             <KeyAttribute
                 app:framePosition="90"
-                app:motionTarget="@id/toolbar_image">
+                app:target="@id/toolbar_image">
                 <CustomAttribute
                     app:attributeName="imageAlpha"
                     app:customIntegerValue="0" />
@@ -64,8 +64,8 @@
             <KeyPosition
                 app:framePosition="50"
                 app:keyPositionType="pathRelative"
-                app:motionTarget="@id/title"
-                app:percentX="0.9" />
+                app:percentX="0.9"
+                app:target="@id/title" />
         </KeyFrameSet>
 
         <OnSwipe

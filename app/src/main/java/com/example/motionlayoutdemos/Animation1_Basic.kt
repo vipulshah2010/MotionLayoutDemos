@@ -21,7 +21,7 @@ class Animation1_Basic : AppCompatActivity() {
             }
 
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                motionLayout.progress = progress.toFloat() / 100
+
             }
         })
     }

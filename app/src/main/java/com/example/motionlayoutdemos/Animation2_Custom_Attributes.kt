@@ -21,7 +21,7 @@ class Animation2_Custom_Attributes : AppCompatActivity() {
             }
 
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                motionLayout.progress = progress.toFloat() / 100
+
             }
         })
     }
