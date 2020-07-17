@@ -2,94 +2,94 @@
 <MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:motion="http://schemas.android.com/apk/res-auto">
 
-    <Transition
-        motion:constraintSetEnd="@id/center_right"
-        motion:constraintSetStart="@id/left_center_right"
-        motion:duration="600"
-        motion:interpolator="easeInOut" />
-
-    <Transition
-        motion:constraintSetEnd="@id/left_center_right"
-        motion:constraintSetStart="@id/center_right"
-        motion:duration="600"
-        motion:interpolator="easeInOut" />
-
-    <Transition
-        motion:constraintSetEnd="@id/left_center_right"
-        motion:constraintSetStart="@id/left_center"
-        motion:duration="600"
-        motion:interpolator="easeInOut" />
-
-    <Transition
-        motion:constraintSetEnd="@id/left_center"
-        motion:constraintSetStart="@id/left_center_right"
-        motion:duration="600"
-        motion:interpolator="easeInOut" />
-
     <ConstraintSet android:id="@+id/left_center_right">
         <Constraint android:id="@id/left">
             <Transform
-                motion:rotation="180"
-                motion:scaleY="1"
-                motion:translationX="-200dp" />
+                android:rotation="180"
+                android:scaleY="1"
+                android:translationX="-200dp" />
         </Constraint>
 
         <Constraint android:id="@id/center">
             <Transform
-                motion:scaleY="1.2"
-                motion:translationX="0dp" />
+                android:scaleY="1.2"
+                android:translationX="0dp" />
         </Constraint>
 
         <Constraint android:id="@id/right">
             <Transform
-                motion:rotation="180"
-                motion:scaleY="1"
-                motion:translationX="200dp" />
+                android:rotation="180"
+                android:scaleY="1"
+                android:translationX="200dp" />
         </Constraint>
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/center_right">
         <Constraint android:id="@id/left">
             <Transform
-                motion:scaleY="1.2"
-                motion:translationX="0dp" />
+                android:scaleY="1.2"
+                android:translationX="0dp" />
         </Constraint>
 
         <Constraint android:id="@id/center">
             <Transform
-                motion:rotation="180"
-                motion:scaleY="1"
-                motion:translationX="200dp" />
+                android:rotation="180"
+                android:scaleY="1"
+                android:translationX="200dp" />
         </Constraint>
 
         <Constraint android:id="@id/right">
             <Transform
-                motion:rotation="180"
-                motion:scaleY="1"
-                motion:translationX="500dp" />
+                android:rotation="180"
+                android:scaleY="1"
+                android:translationX="500dp" />
         </Constraint>
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/left_center">
         <Constraint android:id="@id/left">
             <Transform
-                motion:rotation="180"
-                motion:scaleY="1"
-                motion:translationX="-500dp" />
+                android:rotation="180"
+                android:scaleY="1"
+                android:translationX="-500dp" />
         </Constraint>
 
         <Constraint android:id="@id/center">
             <Transform
-                motion:rotation="180"
-                motion:scaleY="1"
-                motion:translationX="-200dp" />
+                android:rotation="180"
+                android:scaleY="1"
+                android:translationX="-200dp" />
         </Constraint>
 
         <Constraint android:id="@id/right">
             <Transform
-                motion:scaleY="1.2"
-                motion:translationX="0dp" />
+                android:scaleY="1.2"
+                android:translationX="0dp" />
         </Constraint>
     </ConstraintSet>
+
+    <Transition
+        motion:constraintSetEnd="@id/left_center"
+        motion:constraintSetStart="@id/left_center_right"
+        motion:duration="600"
+        motion:motionInterpolator="easeInOut" />
+
+    <Transition
+        motion:constraintSetEnd="@id/center_right"
+        motion:constraintSetStart="@id/left_center_right"
+        motion:duration="600"
+        motion:motionInterpolator="easeInOut" />
+
+    <Transition
+        motion:constraintSetEnd="@id/left_center_right"
+        motion:constraintSetStart="@id/center_right"
+        motion:duration="600"
+        motion:motionInterpolator="easeInOut" />
+
+    <Transition
+        motion:constraintSetEnd="@id/left_center_right"
+        motion:constraintSetStart="@id/left_center"
+        motion:duration="600"
+        motion:motionInterpolator="easeInOut" />
 
 </MotionScene>

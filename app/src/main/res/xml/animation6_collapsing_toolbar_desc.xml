@@ -2,38 +2,6 @@
 <MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <Transition
-        app:constraintSetEnd="@id/collapsed"
-        app:constraintSetStart="@id/expanded">
-
-        <OnSwipe
-            app:dragDirection="dragUp"
-            app:touchAnchorId="@id/recyclerview"
-            app:touchAnchorSide="top" />
-
-        <KeyFrameSet>
-            <KeyAttribute
-                app:framePosition="60"
-                app:target="@id/toolbar_image">
-                <CustomAttribute
-                    app:attributeName="imageAlpha"
-                    app:customIntegerValue="255" />
-            </KeyAttribute>
-            <KeyAttribute
-                app:framePosition="90"
-                app:target="@id/toolbar_image">
-                <CustomAttribute
-                    app:attributeName="imageAlpha"
-                    app:customIntegerValue="0" />
-            </KeyAttribute>
-            <KeyPosition
-                app:framePosition="50"
-                app:keyPositionType="pathRelative"
-                app:percentX="0.9"
-                app:target="@id/title" />
-        </KeyFrameSet>
-    </Transition>
-
     <ConstraintSet android:id="@+id/expanded">
         <Constraint
             android:id="@id/toolbar_image"
@@ -73,5 +41,37 @@
             app:layout_constraintTop_toTopOf="@id/toolbar_image" />
 
     </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/collapsed"
+        app:constraintSetStart="@id/expanded">
+
+        <KeyFrameSet>
+            <KeyAttribute
+                app:framePosition="60"
+                app:motionTarget="@id/toolbar_image">
+                <CustomAttribute
+                    app:attributeName="imageAlpha"
+                    app:customIntegerValue="255" />
+            </KeyAttribute>
+            <KeyAttribute
+                app:framePosition="90"
+                app:motionTarget="@id/toolbar_image">
+                <CustomAttribute
+                    app:attributeName="imageAlpha"
+                    app:customIntegerValue="0" />
+            </KeyAttribute>
+            <KeyPosition
+                app:framePosition="50"
+                app:keyPositionType="pathRelative"
+                app:motionTarget="@id/title"
+                app:percentX="0.9" />
+        </KeyFrameSet>
+
+        <OnSwipe
+            app:dragDirection="dragUp"
+            app:touchAnchorId="@id/recyclerview"
+            app:touchAnchorSide="top" />
+    </Transition>
 
 </MotionScene>

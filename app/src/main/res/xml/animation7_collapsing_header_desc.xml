@@ -2,45 +2,45 @@
 <MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <ConstraintSet android:id="@+id/expanded" />
+
+    <ConstraintSet android:id="@+id/collapsed">
+        <Constraint android:id="@id/headerImageView">
+            <Layout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/headerView"
+                app:layout_constraintStart_toStartOf="@id/headerView"
+                app:layout_constraintTop_toTopOf="@id/headerView" />
+        </Constraint>
+    </ConstraintSet>
+
     <Transition
         app:constraintSetEnd="@id/collapsed"
         app:constraintSetStart="@id/expanded">
 
-        <OnSwipe
-            app:dragDirection="dragUp"
-            app:touchAnchorId="@id/personRecyclerView"
-            app:touchAnchorSide="top" />
-
         <KeyFrameSet>
             <KeyAttribute
                 app:framePosition="0"
-                app:target="@id/headerView">
+                app:motionTarget="@id/headerView">
                 <CustomAttribute
                     app:attributeName="backgroundColor"
                     app:customColorValue="#ffffff" />
             </KeyAttribute>
             <KeyAttribute
                 app:framePosition="100"
-                app:target="@id/headerView">
+                app:motionTarget="@id/headerView">
                 <CustomAttribute
                     app:attributeName="backgroundColor"
                     app:customColorValue="#F8BBD0" />
             </KeyAttribute>
         </KeyFrameSet>
+
+        <OnSwipe
+            app:dragDirection="dragUp"
+            app:touchAnchorId="@id/personRecyclerView"
+            app:touchAnchorSide="top" />
     </Transition>
-
-    <ConstraintSet android:id="@+id/expanded" />
-
-    <ConstraintSet android:id="@+id/collapsed">
-        <Constraint android:id="@id/headerImageView">
-            <Layout
-                app:layout_constraintBottom_toBottomOf="@+id/headerView"
-                app:layout_constraintStart_toStartOf="@id/headerView"
-                app:layout_constraintTop_toTopOf="@id/headerView"
-                app:layout_height="80dp"
-                app:layout_marginStart="8dp"
-                app:layout_width="80dp" />
-        </Constraint>
-    </ConstraintSet>
 
 </MotionScene>

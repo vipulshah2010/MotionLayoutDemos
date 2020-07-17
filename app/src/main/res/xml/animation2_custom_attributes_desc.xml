@@ -2,16 +2,6 @@
 <MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <Transition
-        app:constraintSetEnd="@id/end"
-        app:constraintSetStart="@id/start"
-        app:duration="400">
-
-        <OnClick
-            app:clickAction="toggle"
-            app:target="@id/view" />
-    </Transition>
-
     <ConstraintSet android:id="@+id/start">
 
         <Constraint android:id="@id/view">
@@ -28,22 +18,32 @@
     <ConstraintSet android:id="@+id/end">
 
         <Constraint android:id="@id/view">
-            <Layout
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_height="100dp"
-                app:layout_marginBottom="16dp"
-                app:layout_marginEnd="16dp"
-                app:layout_width="100dp" />
-            <Transform app:rotation="180" />
             <CustomAttribute
                 app:attributeName="backgroundColor"
                 app:customColorValue="#1565C0" />
+            <Layout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+            <Transform android:rotation="180" />
         </Constraint>
 
         <Constraint android:id="@id/textView">
             <PropertySet app:alpha="1" />
         </Constraint>
     </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@id/start"
+        app:duration="400">
+
+        <OnClick
+            app:clickAction="toggle"
+            app:targetId="@id/view" />
+    </Transition>
 
 </MotionScene>
