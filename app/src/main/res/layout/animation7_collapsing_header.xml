@@ -6,24 +6,6 @@
     android:background="#ffffff"
     app:layoutDescription="@xml/animation7_collapsing_header_desc">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/personRecyclerView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/headerImageView" />
-
-    <View
-        android:id="@+id/headerView"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/headerImageView"
         android:layout_width="200dp"
@@ -47,4 +29,22 @@
         app:layout_constraintBottom_toBottomOf="@+id/headerImageView"
         app:layout_constraintStart_toEndOf="@+id/headerImageView"
         app:layout_constraintTop_toTopOf="@+id/headerImageView" />
+
+    <View
+        android:id="@+id/headerView"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/personRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerImageView" />
 </androidx.constraintlayout.motion.widget.MotionLayout>

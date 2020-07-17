@@ -1,6 +1,20 @@
-# Motion Layout Demos
-Collection of examples for AppDevCon Motion Layout Workshop
+<h1 align="center">Motion Layout Demos</h1>
 
+<p align="center">
+  <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
+</p>
+
+<p align="center">  
+This repository contains collection of demos which I presented during AppDevCon'19 [Motion Layout workshop](https://appdevcon.nl/session/animating-apps-using-motionlayout)
+</p>
+</br>
+
+## Library and Frameworks
+- Minimum SDK level 21
+- [Kotlin](https://kotlinlang.org/) based.
+- Motion Layout - 2.0.0-beta8
+
+## Collections of different Animations present in this repository.
 
 |  Title  |  GIF  | Layout | MotionScene | 
 | :----: | :----: | :----: | :----: |
