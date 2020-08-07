@@ -13,6 +13,8 @@ This repository contains collection of demos which I presented during AppDevCon'
 - Minimum SDK level 21
 - [Kotlin](https://kotlinlang.org/) based.
 - Motion Layout - 2.0.0-beta8
+- Android Studio - 4.2 Canary 7 
+- Gradle - 4.2.0-alpha07 & Wrapper - gradle-6.5-all
 
 ## Collections of different Animations present in this repository.
 
