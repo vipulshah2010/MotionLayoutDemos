@@ -3,8 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
+    android:background="@android:color/white"
     app:layoutDescription="@xml/animation7_collapsing_header_desc">
+
+    <View
+        android:id="@+id/headerView"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/headerImageView"
@@ -19,28 +27,21 @@
 
     <TextView
         android:id="@+id/headerTextView"
+        style="@style/TextAppearance.AppCompat.Title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:gravity="start"
         android:text="@string/this_is_awesome_title"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="@+id/headerImageView"
         app:layout_constraintStart_toEndOf="@+id/headerImageView"
         app:layout_constraintTop_toTopOf="@+id/headerImageView" />
 
-    <View
-        android:id="@+id/headerView"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/personRecyclerView"
         android:layout_width="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_height="0dp"
         android:layout_marginTop="4dp"
         app:layout_constraintBottom_toBottomOf="parent"

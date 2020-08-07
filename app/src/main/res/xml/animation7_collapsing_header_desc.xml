@@ -33,7 +33,7 @@
                 app:motionTarget="@id/headerView">
                 <CustomAttribute
                     app:attributeName="backgroundColor"
-                    app:customColorValue="#F8BBD0" />
+                    app:customColorValue="@color/primaryColor" />
             </KeyAttribute>
         </KeyFrameSet>
 

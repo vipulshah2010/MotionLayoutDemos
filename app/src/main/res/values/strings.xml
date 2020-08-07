@@ -1,22 +1,16 @@
 <resources>
-    <string name="app_name">MotionLayoutDemos</string>
-    <string name="action_settings">Settings</string>
-    <string name="behind_the_yellow_door_at_34_there_is_hidden_store_the_hidden_store_at_34_sells_yellow_shoes_nothing_more">Behind the yellow Door at 34,there is hidden store. The hidden store at 34 sells yellow shoes, nothing more.</string>
-    <string name="the_yellow_door_at_34">The Yellow Door at 34</string>
-    <string name="enter">Enter</string>
-    <string name="switch_layout">Switch Layout</string>
-    <string name="profile">Profile</string>
-    <string name="search">Search</string>
-    <string name="likes">Likes</string>
-    <string name="home">Home</string>
-    <string name="button">Button</string>
+    <string name="app_name">Motion Layout</string>
     <string name="square">SQUARE</string>
-    <string name="input_password">Input Password</string>
-    <string name="input_username">Input Username</string>
-    <string name="register">Register</string>
-    <string name="login">Login</string>
-    <string name="save_credentials">Save Credentials</string>
     <string name="this_is_awesome_title">This is Awesome Title</string>
     <string name="alex_smith">Alex Smith</string>
-    <string name="netherlands">Netherlands</string>
+
+    <string-array name="animations">
+        <item>Basic:1BasicAnimationFragment</item>
+        <item>Custom Attributes:2CustomAttributesFragment</item>
+        <item>Key Attributes:3KeyAttributesFragment</item>
+        <item>Photo Manipulation:4PhotoManipulationFragment</item>
+        <item>Carousel:5CarouselFragment</item>
+        <item>Collapsing Toolbar:6CollapsingToolbarFragment</item>
+        <item>Collapsing Header:7CollapsingHeaderFragment</item>
+    </string-array>
 </resources>

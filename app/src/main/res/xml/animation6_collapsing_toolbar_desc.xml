@@ -46,28 +46,6 @@
         app:constraintSetEnd="@id/collapsed"
         app:constraintSetStart="@id/expanded">
 
-        <KeyFrameSet>
-            <KeyAttribute
-                app:framePosition="60"
-                app:motionTarget="@id/toolbar_image">
-                <CustomAttribute
-                    app:attributeName="imageAlpha"
-                    app:customIntegerValue="255" />
-            </KeyAttribute>
-            <KeyAttribute
-                app:framePosition="90"
-                app:motionTarget="@id/toolbar_image">
-                <CustomAttribute
-                    app:attributeName="imageAlpha"
-                    app:customIntegerValue="0" />
-            </KeyAttribute>
-            <KeyPosition
-                app:framePosition="50"
-                app:keyPositionType="pathRelative"
-                app:motionTarget="@id/title"
-                app:percentX="0.9" />
-        </KeyFrameSet>
-
         <OnSwipe
             app:dragDirection="dragUp"
             app:touchAnchorId="@id/recyclerview"

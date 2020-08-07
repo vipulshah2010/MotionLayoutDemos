@@ -3,15 +3,19 @@ package com.example.motionlayoutdemos
 import android.os.Bundle
 import android.widget.SeekBar
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.animation2_custom_attributes.*
+import com.example.motionlayoutdemos.databinding.Activity4photoManipulationBinding
 
 // layout changes
-class Animation4_Photo_Manipulation : AppCompatActivity() {
+class PhotoManipulationActivity : AppCompatActivity() {
+
+    private lateinit var binding: Activity4photoManipulationBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.animation4_photo_manipulation)
+        binding = Activity4photoManipulationBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+        binding.seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onStartTrackingTouch(seekBar: SeekBar?) {
                 // do nothing
             }
@@ -21,7 +25,7 @@ class Animation4_Photo_Manipulation : AppCompatActivity() {
             }
 
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                motionLayout.progress = progress.toFloat() / 100
+                binding.motionLayout.progress = progress.toFloat() / 100
             }
         })
     }
